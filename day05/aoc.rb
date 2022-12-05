@@ -61,7 +61,6 @@ inputs.drop(10).each do |line_of_direction|
   # e.g. move 2 from 4 to 6
   # gsub to 246
   # where 1st index is # of crate, 2 is where we removing it from, and 3rd is where it being inserted to
-  # num_of_crates, from_column, to_column = line_of_direction.gsub(/[^0-9]/, '').chars.map(&:to_i)
   directions = line_of_direction.gsub(/[^0-9]/, '').chars
   # TODO: better way to do this?
   if directions.length === 3
