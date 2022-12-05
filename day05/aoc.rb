@@ -20,9 +20,7 @@ class Column
   end
 
   def mult_remove(num_of_crates)
-    remove_value = @stack[-num_of_crates..-1]
-    @stack = @stack[0...@stack.length - num_of_crates]
-    remove_value
+    @stack.pop(num_of_crates)
   end
 
   def add(crate)
@@ -30,7 +28,7 @@ class Column
   end
 
   def mult_add(crates)
-    @stack.push(crates).flatten!
+    @stack += crates
   end
 
   def top_crate
@@ -84,3 +82,5 @@ end
 
 p "Part A: #{crate_columns.map {|column| column.top_crate}.join("")}"
 p "Part B: #{second_crate_columns.map {|column| column.top_crate}.join("")}"
+
+# TPWCGNCCG
