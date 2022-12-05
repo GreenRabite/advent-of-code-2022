@@ -82,5 +82,3 @@ end
 
 p "Part A: #{crate_columns.map {|column| column.top_crate}.join("")}"
 p "Part B: #{second_crate_columns.map {|column| column.top_crate}.join("")}"
-
-# TPWCGNCCG
