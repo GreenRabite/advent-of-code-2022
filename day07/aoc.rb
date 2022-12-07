@@ -64,7 +64,7 @@ command_inputs = inputs.reduce([]) do |accum, cmd|
   accum
 end
 
-command_inputs.each_with_index do |input, idx|
+command_inputs.each do |input|
   _, command, param = input[:cmd].split(" ")
 
   if command === 'cd'
