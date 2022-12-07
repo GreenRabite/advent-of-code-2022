@@ -46,8 +46,7 @@ class ElfFile
 end
 
 def current_path(directory)
-  return '' if !directory
-  return '/' if directory.parent.nil?
+  return '' if !directory || directory.parent.nil?
 
   current_path(directory.parent) +'/' + directory.name
 end
