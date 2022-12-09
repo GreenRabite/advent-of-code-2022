@@ -3,18 +3,8 @@ File.open("./input.txt").each do |line|
   inputs << line.chomp
 end
 
-
 ROPE = Array.new(2) { Array.new(2,0) }
 LONG_ROPE = Array.new(10) { Array.new(2,0) }
-
-
-class Point
-  attr_reader :x, :y
-  def initialize(x,y)
-    @x=x
-    @y=y
-  end
-end
 
 def move_head(current_position, direction)
   x, y = current_position
